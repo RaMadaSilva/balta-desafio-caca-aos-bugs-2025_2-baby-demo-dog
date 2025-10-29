@@ -8,7 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<AppDbContext>(x =>x.UseSqlite(connectionString));
+builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlite(connectionString));
+
+// Registrar Handlers
+builder.Services.AddScoped<BugStore.Handlers.Customers.Handler>();
+builder.Services.AddScoped<BugStore.Handlers.Products.Handler>();
+builder.Services.AddScoped<BugStore.Handlers.Orders.Handler>();
 
 var app = builder.Build();
 

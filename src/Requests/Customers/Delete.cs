@@ -1,6 +1,6 @@
 namespace BugStore.Requests.Customers;
 
-public class Delete
+public record DeleteCustomerRequest
 {
-    
+    public required Guid Id { get; init; }
 }

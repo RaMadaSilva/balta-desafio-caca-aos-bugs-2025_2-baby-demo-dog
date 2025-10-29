@@ -1,6 +1,6 @@
 namespace BugStore.Requests.Products;
 
-public class Delete
+public record DeleteProductRequest
 {
-    
+    public required Guid Id { get; init; }
 }

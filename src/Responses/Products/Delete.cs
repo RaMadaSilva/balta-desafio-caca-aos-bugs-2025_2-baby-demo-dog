@@ -1,6 +1,7 @@
 namespace BugStore.Responses.Products;
 
-public class Delete
+public record DeleteProductResponse
 {
-    
+    public Guid Id { get; init; }
+    public bool Success { get; init; }
 }

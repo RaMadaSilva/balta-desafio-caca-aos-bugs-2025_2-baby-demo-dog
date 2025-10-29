@@ -1,6 +1,6 @@
 namespace BugStore.Requests.Orders;
 
-public class GetById
+public record GetOrderByIdRequest
 {
-    
+    public required Guid Id { get; init; }
 }

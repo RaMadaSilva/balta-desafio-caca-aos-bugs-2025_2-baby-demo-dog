@@ -9,5 +9,6 @@ public class OrderLine
     public decimal Total { get; set; }
     
     public Guid ProductId { get; set; }
-    public Product Product { get; set; }
+    public Product Product { get; set; } = null!;
+    public Order Order { get; set; } = null!;
 }
